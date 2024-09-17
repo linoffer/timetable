@@ -16,15 +16,30 @@ class Table:
                 self.e.grid(row=i, column=j)
                 self.e.insert(END, lst[i][j])
 
-
+num_of_hours = 6
+num_of_days = 6
 # take the data
 for i in range(3):
-    S = [["free" for x in range(6)] for i in range(6)]
+    S = [["free" for x in range(num_of_days)] for i in range(num_of_hours)]
     file = open("sch.txt"+str(i), 'w')
     json.dump(S,file)
 
 
+
+
+
+
 milon = {'pysics': 2, 'math': 3,"loop":5}
+
+for i in milon:
+    print(i)
+    num_of_teachers = int(input("how many teacher for this subject?"))
+    for j in range(num_of_teachers):
+        S = [["free" for x in range(num_of_days)] for i in range(num_of_hours)]
+        file = open("teacher.txt" + str(j), 'w')
+        json.dump(S, file)
+
+
 
 
 x = 0
