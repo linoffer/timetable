@@ -2,7 +2,8 @@
 
 from tkinter import *
 import json
-
+OPENHOUR = 'free'
+BUSYHOUR = 'busy'
 class Table:
 
     def __init__(self, root):
